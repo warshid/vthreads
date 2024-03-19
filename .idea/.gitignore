@@ -1,7 +1,9 @@
 # Default ignored files
 /shelf/
-workspace.xml
+compiler.xml
 google-java-format.xml
+jarRepositories.xml
 jpa-buddy.xml
 sonarlint.xml
-ui-designer.xml
+uiDesigner.xml
+workspace.xml

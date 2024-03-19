@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class ThreadComparison {
 
-  private final static boolean vThreads = false;
+  private final static boolean vThreads = true;
   private final static Random random = new Random();
 
   public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class ThreadComparison {
 
     long start = System.currentTimeMillis();
 
-    for (int i = 0; i < 50000; i++) {
+    for (int i = 0; i < 100000; i++) {
       if (vThreads) {
         Thread.startVirtualThread(runnable);
       } else {
