@@ -4,3 +4,4 @@ workspace.xml
 google-java-format.xml
 jpa-buddy.xml
 sonarlint.xml
+ui-designer.xml
