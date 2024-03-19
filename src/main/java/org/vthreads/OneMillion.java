@@ -7,21 +7,24 @@ import java.util.ArrayList;
 import static java.lang.Thread.sleep;
 import static java.lang.Thread.startVirtualThread;
 
-public class Main {
-
-    private static final int ONE_MILLION_DOLLARS = 1000000;
+public class OneMillion {
 
     @SneakyThrows
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("hello world!");
+        long start = System.currentTimeMillis();
         startVirtualThreads_1_Million();
+        long finish = System.currentTimeMillis();
+        System.out.println("main ended");
+        long timeElapsed = finish - start;
+        System.out.println("Run time: " + timeElapsed + "ms");
     }
 
     private static void startVirtualThreads_1_Million() throws InterruptedException {
-        var threads = new ArrayList<Thread>(ONE_MILLION_DOLLARS);
-        for (int i = 0; i < ONE_MILLION_DOLLARS; i++) {
+        var threads = new ArrayList<Thread>();
+        for (int i = 0; i < 1_000_000; i++) {
             var thread = startVirtualThread(() -> {
-                System.out.println(Thread.currentThread());
+//                System.out.println(Thread.currentThread());
                 try {
                     sleep(100);
                 } catch (InterruptedException e) {
